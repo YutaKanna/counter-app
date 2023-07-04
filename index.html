@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js カウンターアプリ</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>カウンターアプリ</h1>
+    <p>カウント: {{ counter }}</p>
+    <button @click="increment">増やす</button>
+    <button @click="decrement">減らす</button>
+  </div>
+
+  <script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      increment() {
+        this.counter++;
+      },
+      decrement() {
+        this.counter--;
+      }
+    }
+  });
+  </script>
+</body>
+</html>
